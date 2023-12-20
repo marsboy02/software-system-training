@@ -24,7 +24,7 @@ export class UserService {
       totalBuy: total,
       totalEvaluation: totalEvaluation,
       valuationProfitAndLoss: totalEvaluation - total,
-      rateOfReturn: ((totalEvaluation - total) / total) * 100,
+      rateOfReturn: Math.round(((totalEvaluation - total) / total) * 100),
     };
   }
 }
