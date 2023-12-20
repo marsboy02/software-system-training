@@ -14,6 +14,10 @@ export class OrderService {
     return this.orderRepository.getAllOrder();
   }
 
+  getOrderOne(name: string) {
+    return this.orderRepository.getOrderOne(name);
+  }
+
   putOrderSold() {
     return this.orderRepository.putOrderSold();
   }

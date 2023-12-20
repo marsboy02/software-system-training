@@ -28,6 +28,15 @@ export class OrderRepository {
       .getRawMany();
   }
 
+  getOrderOne(name: string) {
+    return this.dataSource
+      .createQueryBuilder()
+      .select()
+      .from(OrderEntity, 'Order')
+      .where(`Order.name =:name`, { name })
+      .getRawMany();
+  }
+
   putOrderSold() {
     return 'putOrderSold';
   }
